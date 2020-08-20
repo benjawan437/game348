@@ -70,7 +70,7 @@ export default {
   font-size: 50px;
 }
 .button-a {
-  background-color: rgb(170, 163, 163);
+  background-color: rgb(80, 79, 79);
   border: none;
   padding: 5px 5px 5px 5px;
   text-align: center;
