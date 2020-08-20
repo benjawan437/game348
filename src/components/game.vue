@@ -1,7 +1,7 @@
 <template>
   <div>
 
-    {{player[randomNO(1,3)-1].name}}<br><br>
+    {{player[randomNO(1,4)-1].name}}<br><br>
     <!--ได้ทั้งชื่อและ hp ออกมา-->
     <!--{{randomDamage(1,300)}} สุ่ม 1 - 300-->
     <button v-on:click="$start" class="button-a" id="yellow">START</button>
