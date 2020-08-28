@@ -126,7 +126,7 @@ export default {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    color: #313030;
+    color: #020202;
 }
 
 .can {
