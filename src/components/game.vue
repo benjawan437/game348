@@ -55,7 +55,7 @@ export default {
                 {
                     name: "Beast Titan",
                     hp: 265,
-                    image: require("../assets/14.png"),
+                    image: require("../assets/a12.png"),
                 },
                 {
                     name: "Female Titan",
