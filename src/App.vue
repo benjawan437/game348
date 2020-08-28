@@ -4,6 +4,7 @@
         <div class="row">
             <div class="col-md-4 col-sm-4">
                 <h1>{{go_name}}</h1>
+                <h3>HP: {{go_hp}}</h3>
                 <b-progress :value="go_hp" :max="g_max" class="bar" show-value variant="succecss"></b-progress>
                 <div class="back">
                     <img :src="g_img" class="img-fluid image" :width="go_hp + 'px'" />
@@ -14,6 +15,7 @@
             </div>
             <div class="col-md-4 col-sm-4">
                 <h1>{{ev_name}}</h1>
+                <h3>HP: {{ev_hp}}</h3>
                 <b-progress :value="ev_hp" :max="e_max" class="bar" show-value variant="succecss"></b-progress>
                 <div class="back">
                     <img :src=" e_img" class="img-fluid image" :width="ev_hp + 'px'" />
@@ -37,7 +39,6 @@
             </pop>
         </div>
     </div>
-
 </div>
 </template>
 
