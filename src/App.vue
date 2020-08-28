@@ -25,20 +25,31 @@
     <div class="row">
         <div class="col-md-12 col-sm-12">
             <game @Gname="gname" @Ghp="ghp" @Gimage="gimage" @Ename="ename" @Ehp="ehp" @Eimage="eimage" @Gten="gten" @Eten="eten" @Gwin="gwin" @Ewin="ewin"></game>
+
+            <modal v-if="go_hp <= 0 && ev_hp > 0 && go_name != ''" @$reset="$reset" @reset="reset" @close="showModal = false">
+                <h1 slot="body">YOU LOUSE</h1>
+            </modal>
+            <modal v-if="ev_hp <= 0 && go_hp > 0 && go_name != ''" @$reset="$reset" @reset="reset" @close="showModal = false">
+                <h1 slot="body">YOU WIN</h1>
+            </modal>
+            <modal v-if="(go_hp<=0 && ev_hp <= 0 ) && go_name != ''" v-bind="reset" @$reset="$reset" @reset="reset" @close="showModal = false">
+                <h1 slot="body">DRAW</h1>
+            </modal>
         </div>
     </div>
+    <pop></pop>
 </div>
 </template>
 
 <script>
 import game from "./components/game";
+import pop from "./components/pop";
 export default {
     name: "App",
     components: {
-        //HelloWorld,
         game,
+        pop,
     },
-
     data: function () {
         return {
             go_name: "",
@@ -94,6 +105,16 @@ export default {
             this.attack = value;
             this.go_hp -= this.attack;
         },
+        $reset(value) {
+            this.go_name = value;
+            this.ev_name = value;
+            this.g_img = value;
+            this.e_img = value;
+        },
+        reset(value) {
+            this.go_hp = value;
+            this.ev_hp = value;
+        },
     },
 };
 </script>
@@ -115,6 +136,12 @@ export default {
 
 .gvse {
     margin-top: 30vw;
+}
+
+.tiles {
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
 }
 
 .back {
