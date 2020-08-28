@@ -6,7 +6,7 @@
                 <h1>{{go_name}}</h1>
                 <b-progress :value="go_hp" :max="g_max" class="bar" show-value variant="succecss"></b-progress>
                 <div class="back">
-                    <img :src="g_img" class="img-fluid image" :height="go_hp + 'px'" />
+                    <img :src="g_img" class="img-fluid image" :width="go_hp + 'px'" />
                 </div>
             </div>
             <div class="col-md-4 mt-5 col-sm-4">
@@ -16,7 +16,7 @@
                 <h1>{{ev_name}}</h1>
                 <b-progress :value="ev_hp" :max="e_max" class="bar" show-value variant="succecss"></b-progress>
                 <div class="back">
-                    <img :src=" e_img" class="img-fluid image" :height="ev_hp + 'px'" />
+                    <img :src=" e_img" class="img-fluid image" :width="ev_hp + 'px'" />
                 </div>
             </div>
         </div>

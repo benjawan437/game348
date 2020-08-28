@@ -91,7 +91,7 @@ export default {
 }
 
 .button-a {
-    background-color: rgb(248, 223, 78);
+    background-color: rgb(248, 203, 78);
     border: none;
     padding: 5px 5px 5px 5px;
     text-align: center;
