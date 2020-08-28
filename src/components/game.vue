@@ -17,54 +17,54 @@ export default {
             //เอาชื่อออกจาก object player[random].name
             player: [{
                     name: "Levi",
-                    hp: 260,
+                    hp: 270,
                     image: require("../assets/1.png"),
                 },
                 {
                     name: "Eren Titan",
-                    hp: 210,
+                    hp: 250,
                     image: require("../assets/4.png"),
                 },
                 {
                     name: "Armin",
-                    hp: 110,
+                    hp: 230,
                     image: require("../assets/3.png"),
                 },
                 {
                     name: "Mikasa",
-                    hp: 230,
+                    hp: 260,
                     image: require("../assets/2.png"),
                 },
                 {
                     name: "Jean",
-                    hp: 120,
+                    hp: 225,
                     image: require("../assets/5.png"),
                 },
             ],
 
             monster: [{
                     name: "Colossal Titan",
-                    hp: 210,
+                    hp: 235,
                     image: require("../assets/11.png"),
                 },
                 {
                     name: "Armored Titan",
-                    hp: 230,
+                    hp: 250,
                     image: require("../assets/13.png"),
                 },
                 {
                     name: "Beast Titan",
-                    hp: 255,
+                    hp: 265,
                     image: require("../assets/14.png"),
                 },
                 {
                     name: "Female Titan",
-                    hp: 190,
+                    hp: 230,
                     image: require("../assets/12.png"),
                 },
                 {
                     name: "Annie",
-                    hp: 120,
+                    hp: 225,
                     image: require("../assets/15.png"),
                 },
             ],
