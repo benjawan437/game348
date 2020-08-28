@@ -114,7 +114,7 @@ export default {
 }
 
 .gvse {
-    margin-top: 20vw;
+    margin-top: 30vw;
 }
 
 .back {

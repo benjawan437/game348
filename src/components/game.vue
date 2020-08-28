@@ -43,7 +43,7 @@ export default {
             ],
 
             monster: [{
-                    name: "Colossal Titan",
+                    name: "Dancing Titan",
                     hp: 235,
                     image: require("../assets/11.png"),
                 },
