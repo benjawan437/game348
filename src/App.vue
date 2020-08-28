@@ -6,7 +6,7 @@
                 <h1>{{go_name}}</h1>
                 <b-progress :value="go_hp" :max="g_max" class="bar" show-value variant="succecss"></b-progress>
                 <div class="back">
-                    <img :src="g_img" class="img-fluid image" :width="go_hp + 'px'" />
+                    <img :src="g_img" class="img-fluid image" :height="go_hp + 'px'" />
                 </div>
             </div>
             <div class="col-md-4 mt-5 col-sm-4">
@@ -16,7 +16,7 @@
                 <h1>{{ev_name}}</h1>
                 <b-progress :value="ev_hp" :max="e_max" class="bar" show-value variant="succecss"></b-progress>
                 <div class="back">
-                    <img :src=" e_img" class="img-fluid image" :width="ev_hp + 'px'" />
+                    <img :src=" e_img" class="img-fluid image" :height="ev_hp + 'px'" />
                 </div>
             </div>
         </div>
@@ -26,18 +26,18 @@
         <div class="col-md-12 col-sm-12">
             <game @Gname="gname" @Ghp="ghp" @Gimage="gimage" @Ename="ename" @Ehp="ehp" @Eimage="eimage" @Gten="gten" @Eten="eten" @Gwin="gwin" @Ewin="ewin"></game>
 
-            <modal v-if="go_hp <= 0 && ev_hp > 0 && go_name != ''" @$reset="$reset" @reset="reset" @close="showModal = false">
+            <pop v-if="go_hp <= 0 && ev_hp > 0 && go_name != ''" @$reset="$reset" @reset="reset" @close="showModal = false">
                 <h1 slot="body">YOU LOUSE</h1>
-            </modal>
-            <modal v-if="ev_hp <= 0 && go_hp > 0 && go_name != ''" @$reset="$reset" @reset="reset" @close="showModal = false">
+            </pop>
+            <pop v-if="ev_hp <= 0 && go_hp > 0 && go_name != ''" @$reset="$reset" @reset="reset" @close="showModal = false">
                 <h1 slot="body">YOU WIN</h1>
-            </modal>
-            <modal v-if="(go_hp<=0 && ev_hp <= 0 ) && go_name != ''" v-bind="reset" @$reset="$reset" @reset="reset" @close="showModal = false">
+            </pop>
+            <pop v-if="(go_hp<=0 && ev_hp <= 0 ) && go_name != ''" v-bind="reset" @$reset="$reset" @reset="reset" @close="showModal = false">
                 <h1 slot="body">DRAW</h1>
-            </modal>
+            </pop>
         </div>
     </div>
-    <pop></pop>
+
 </div>
 </template>
 

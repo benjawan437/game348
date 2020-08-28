@@ -1,14 +1,14 @@
 <template>
 <transition name="uppop">
-    <div class="modal-mask content">
-        <div class="modal-wrapper">
-            <div class="modal-container">
-                <div class="modal-header">
+    <div class="uppop-mask content">
+        <div class="uppop-wrapper">
+            <div class="uppop-container">
+                <div class="uppop-header">
                     <slot name="header">
                         <h3><b> GAME OVER</b></h3>
                     </slot>
                 </div>
-                <div class="modal-body">
+                <div class="uppop-body">
                     <slot name="body"></slot>
                     <slot name="footer">
                         <button class="button-a mt-5" id="new" @click="$emit('close',false),$emit('reset',0),$emit('$reset','')">Play Again</button>
@@ -35,7 +35,7 @@ export default {
 </script>
 
 <style scoped>
-.modal-mask {
+.uppop-mask {
     position: fixed;
     z-index: 9998;
     top: 0;
@@ -47,12 +47,12 @@ export default {
     transition: opacity 0.3s ease;
 }
 
-.modal-wrapper {
+.uppop-wrapper {
     display: table-cell;
     vertical-align: middle;
 }
 
-.modal-container {
+.uppop-container {
     width: 50%;
     height: 50%;
     margin: 0px auto;
@@ -63,35 +63,35 @@ export default {
     transition: all 0.3s ease;
 }
 
-.modal-header h3 {
+.uppop-header h3 {
     margin-top: 0;
     color: #020202;
 }
 
-.modal-body {
+.uppop-body {
     margin: 190px 0;
 }
 
-.modal-header {
+.uppop-header {
     color: #000000;
 }
 
-.modal-enter {
+.uppop-enter {
     opacity: 0;
 }
 
-.modal-leave-active {
+.uppop-leave-active {
     opacity: 0;
 }
 
-.modal-enter .modal-container,
-.modal-leave-active .modal-container {
+.uppop-enter .uppop-container,
+.uppop-leave-active .uppop-container {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
 }
 
 .button-a {
-    background-color: rgb(255, 190, 70);
+    background-color: rgb(248, 223, 78);
     border: none;
     padding: 5px 5px 5px 5px;
     text-align: center;
